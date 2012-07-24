@@ -21,5 +21,5 @@ router.on('*', function( req, res ){
 
 http.createServer(function( req, res ){
   router.dispatch( req, res );
-}).listen(3000);
+}).listen(process.env.PORT || 3000);
 

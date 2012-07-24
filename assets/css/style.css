@@ -236,13 +236,13 @@ article > p {
   column-gap: 20px;
 }
 
-article > h1 { width: 960px; margin: 1em auto 0; font-size: 6em; font-weight: bold; }
-article > h2 { width: 960px; margin: 1em auto 0; font-size: 4em; font-weight: bold; }
-article > h3,
-article > time { width: 960px; margin: 1em auto; font-size: 2em; }
+article h1 { margin: 1em auto 0; font-size: 6em; font-weight: bold; }
+article h2 { margin: 1em auto 0; font-size: 4em; font-weight: bold; }
+article h3,
+article time { width: 960px; margin: 1em auto; font-size: 2em; }
 
 article .bottom { position: absolute; bottom: 100px; left: 100px; }
-article .top { position: absolute; top: 0px; left: 100px; }
+article .top { position: absolute; top: 0px; left: 100px; max-width: 80%; }
 
 article > iframe { margin: 100px auto 0; display: block; }
 

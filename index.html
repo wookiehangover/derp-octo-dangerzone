@@ -23,7 +23,7 @@
 
     <article data-route="stream-all-the-things" id="tiffany">
       <img src=/assets/img/1295919804851.jpeg>
-      <h1 class="top fragment">stream all the things</h1>
+      <h1 class="top fragment">STREAM ALL THE THINGS</h1>
     </article>
 
     <article id="streams" class="ui-hidden">
@@ -46,14 +46,64 @@
       <h1 class="top fragment alt">What does it <b>do</b>?</h1>
     </article>
 
+    <article id="streams-are-eventemitters" class="ui-hidden">
+      <h1 class="top">An EventEmitter with predictable events</h1>
+    </article>
+
+    <article id="all-the-streams-are-belong-to-us" class="ui-hidden">
+      <div class="top">
+        <h2>Writable Streams output data</h2>
+        <h2 class="fragment">Readable Streams accept data</h2>
+        <h2 class="fragment">.pipe() ties them together</h2>
+      </div>
+    </article>
+
     <article id="tell-me-more" class="ui-hidden">
       <img src=/assets/img/1314768330113.jpeg>
       <h1 class="top fragment alt">I'm listening...</h1>
     </article>
 
+    <article id="you-already-use-them" class="ui-hidden">
+      <div class="top">
+        <h2>And you already use them</h2>
+
+        <pre class="fragment">
+          process.stdin.resume(); process.stdin.pipe(process.stdout);
+        </pre>
+
+        <pre class="fragment">
+          http.creatServer(function( req, res ){
+            // both `req` and `res` are streams
+            <code class="fragment">
+            var proxy = request('http://somedomain/' + req.url);
+            req.pipe( proxy );
+            proxy.pipe( res ); <b class="fragment">// wuut?</b>
+            </code>
+          });
+        </pre>
+
+        <pre class="fragment">
+          http.creatServer(function( req, res ){
+            fs.createReadStream('./index.html').pipe( res ); <b class="fragment">// dlb wuuut???</b>
+          });
+        </pre>
+      </div>
+    </article>
+
     <article id="hotdog-cat" class="ui-hidden">
       <img src=/assets/img/1339038475194.jpeg>
       <h1 class="top fragment alt">Oh the possibilities!</h1>
+    </article>
+
+    <article id="but-wait" class="ui-hidden">
+      <img src=/assets/img/smiley.gif>
+      <h1 class=top>But wait, there's more</h1>
+    </article>
+
+    <article id="in-the-browser" class="ui-hidden">
+      <h2>You can use streams in the browser.</h2>
+      <h3 class="fragment">substack's browserify + MaxOgden's domnode = MAGIC</h3>
+      <h2 class="fragment">demo time</h2>
     </article>
 
     <article id="javascript-is-fun" class="ui-hidden">

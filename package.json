@@ -1,9 +1,10 @@
 {
   "name": "boulderjs",
-  "version": "0.0.0",
+  "version": "0.0.0-3",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "server.js"
   },
   "license": "BSD",
   "devDependencies": {
@@ -12,5 +13,9 @@
   "dependencies": {
     "ecstatic": "~0.1.6",
     "ramrod": "0.0.2"
-  }
+  },
+  "engines": {
+    "node": "0.6.x"
+  },
+  "subdomain": "boulder-js"
 }
