@@ -18,7 +18,8 @@ require.config({
       exports: "_"
     },
 
-    transform: []
+    transform: [],
+    easing: []
   }
 });
 

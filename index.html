@@ -8,122 +8,31 @@
   <link href='http://fonts.googleapis.com/css?family=Ubuntu+Mono' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="/assets/css/style.css">
 
-  <title>boulder.js</title>
+  <title>#JIFASNIF</title>
 </head>
 
 <body>
   <!-- Main container -->
   <div role="main" id="main">
 
-    <article class="ui-active" id="cover" data-route="/">
-      <h1>BOULDER.JS</h1>
-      <h2>@wookiehangover</h2>
-      <h3>July 24, 2012</h3>
-    </article>
-
-    <article data-route="stream-all-the-things" id="tiffany">
-      <img src=/assets/img/1295919804851.jpeg>
-      <h1 class="top fragment">STREAM ALL THE THINGS</h1>
-    </article>
-
-    <article id="streams" class="ui-hidden">
-      <img src=/assets/img/original.gif>
-      <h1 class="top alt">Node is built on Streams and EventEmitters</h1>
-    </article>
-
-    <article id="flow-control" class="ui-hidden">
-      <img src=/assets/img/flow-control.gif>
-      <h1 class="top alt">Streams are literally flow control</h1>
-    </article>
-
-    <article id="highly-illogical" class="ui-hidden">
-      <img src=/assets/img/1308958973205.gif>
-      <h1 class="top fragment alt">How Logical.</h1>
-    </article>
-
-    <article id="what-it-do" class="ui-hidden">
-      <img src=/assets/img/trek_hmm.gif>
-      <h1 class="top fragment alt">What does it <b>do</b>?</h1>
-    </article>
-
-    <article id="streams-are-eventemitters" class="ui-hidden">
-      <h1 class="top">An EventEmitter with predictable events</h1>
-    </article>
-
-    <article id="all-the-streams-are-belong-to-us" class="ui-hidden">
-      <div class="top">
-        <h2>Writable Streams output data</h2>
-        <h2 class="fragment">Readable Streams accept data</h2>
-        <h2 class="fragment">.pipe() ties them together</h2>
-      </div>
-    </article>
-
-    <article id="tell-me-more" class="ui-hidden">
-      <img src=/assets/img/1314768330113.jpeg>
-      <h1 class="top fragment alt">I'm listening...</h1>
-    </article>
-
-    <article id="you-already-use-them" class="ui-hidden">
-      <div class="top">
-        <h2>And you already use them</h2>
-
-        <pre class="fragment">
-          process.stdin.resume(); process.stdin.pipe(process.stdout);
-        </pre>
-
-        <pre class="fragment">
-          http.creatServer(function( req, res ){
-            // both `req` and `res` are streams
-            <code class="fragment">
-            var proxy = request('http://somedomain/' + req.url);
-            req.pipe( proxy );
-            proxy.pipe( res ); <b class="fragment">// wuut?</b>
-            </code>
-          });
-        </pre>
-
-        <pre class="fragment">
-          http.creatServer(function( req, res ){
-            fs.createReadStream('./index.html').pipe( res ); <b class="fragment">// dlb wuuut???</b>
-          });
-        </pre>
-      </div>
-    </article>
-
-    <article id="hotdog-cat" class="ui-hidden">
-      <img src=/assets/img/1339038475194.jpeg>
-      <h1 class="top fragment alt">Oh the possibilities!</h1>
-    </article>
-
-    <article id="but-wait" class="ui-hidden">
-      <img src=/assets/img/smiley.gif>
-      <h1 class=top>But wait, there's more</h1>
-    </article>
-
-    <article id="in-the-browser" class="ui-hidden">
-      <h2>You can use streams in the browser.</h2>
-      <h3 class="fragment">substack's browserify + MaxOgden's domnode = MAGIC</h3>
-      <h2 class="fragment">demo time</h2>
-    </article>
-
-    <article id="javascript-is-fun" class="ui-hidden">
+    <article id="javascript-is-fun" class="ui-active">
       <img src=/assets/img/bounce-house.jpeg>
-      <h1 class="top fragment alt">JavaScript is fun</h1>
+      <h1 class="top fragment alt">JavaScript is fun &#9047;</h1>
     </article>
 
-    <article id="and-so-node-is-fun" class="ui-hidden">
+    <article id="and-so-node-is-fun">
       <img src=/assets/img/mechanical_bull.png>
-      <h1 class="top fragment" style="color: black; top: -100px;">And so Node is fun</h1>
+      <h1 class="top" style="color: black; top: -100px;">And so Node is fun</h1>
     </article>
 
-    <article id="questions" class="ui-hidden">
+    <article id="questions">
       <img src=/assets/img/542268_674573686921_1334216931_n.jpeg>
       <h1 class="top fragment" style="color: red;">Any Questions?</h1>
     </article>
 
     <article id="thanks" class="ui-hidden">
       <img src=/assets/img/tumblr_lt830jkgdb1qek00oo1_500.gif>
-      <div class="top">
+      <div class="top fragment">
         <h2 class="alt">Quick Left</h2>
         <h2 class="alt">@wookiehangover</h2>
       </div>
@@ -133,7 +42,7 @@
 
   <script src=//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js></script>
   <script>!window.jQuery && document.write('<script src="/assets/js/libs/jquery.js"><\/script>')</script>
-  <script data-main="app/config.js" src=/assets/js/require.js></script>
+  <script data-main="app/config.js" src=/assets/release/require.js></script>
 
 </body>
 </html>

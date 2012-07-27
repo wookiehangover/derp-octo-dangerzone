@@ -257,6 +257,7 @@ article .fragment { visibility: hidden;
 article.ui-active h1.fragment,
 article .fragment.js-show { visibility: visible }
 
+.pewpew { position: absolute; top: 40%; left: 50%; font-size: 6em; color: #fff;}
 /* article.ui-active h1.fragment { opacity: 1; } */
 
 .ui-hidden { visibility: hidden; }
