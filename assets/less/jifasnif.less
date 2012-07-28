@@ -1,0 +1,125 @@
+@import 'reset.less';
+
+html, body { height: 100%; font-family: 'Ubuntu Mono'; text-shadow: 1px 1px 3px #222;  }
+
+h1.alt,
+h2.alt,
+h3.alt { color: white;  }
+
+#main { height: 100%; }
+
+#cover { color: #fff; text-shadow: 1px 1px 2px #888;  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAHklEQVQIHWOw56o98///fwZkzAjioAMmdAEQn3hBAO6aEIuiymm6AAAAAElFTkSuQmCC); }
+
+.full-screen () {
+  width: 100%; display: block; margin: 0 auto; z-index: 100; 
+}
+
+article {
+  min-height: 100%;
+  background: #eaeaea;
+  width: 100%;
+  display: block;
+  overflow:hidden;
+  position: fixed;
+  top:0; left: 0;
+  line-height: 1;
+
+  &.ui-active { z-index: 200; display:block; }
+
+  > img { .full-screen; }
+
+  &:nth-of-type(2n) { background: #222; color: #eaeaea;}
+
+  > pre { margin-left: 20%; font-weight: bold;}
+
+  > p {
+    line-height: 1.4em;
+    margin: 3em auto;
+    width: 960px;
+    -moz-column-count: 2;
+    -moz-column-gap: 20px;
+    -webkit-column-count: 2;
+    -webkit-column-gap: 20px;
+    column-count: 2;
+    column-gap: 20px;
+  }
+
+  h1 { margin: 1em auto 0; font-size: 6em; font-weight: bold; }
+  h2 { margin: 1em auto 0; font-size: 4em; font-weight: bold; }
+  h3,
+  time { width: 960px; margin: 1em auto; font-size: 2em; }
+
+  .bottom { position: absolute; bottom: 100px; left: 100px; }
+  .top { position: absolute; top: 0px; left: 100px; max-width: 80%; }
+
+  > iframe { margin: 100px auto 0; display: block; }
+
+  .fragment { visibility: hidden;
+    -webkit-transition: all 0.1s ease-out; 
+       -moz-transition: all 0.1s ease-out; 
+         -o-transition: all 0.1s ease-out; 
+            transition: all 0.1s ease-out;
+  }
+
+  &.ui-active h1.fragment,
+  .fragment.js-show { visibility: visible }
+}
+
+.substack {
+
+  -webkit-transition: all 0.3s ease-out;
+     -moz-transition: all 0.3s ease-out;
+       -o-transition: all 0.3s ease-out;
+          transition: all 0.3s ease-out;
+}
+
+.rotate (@deg: 7.5deg) {
+  -webkit-transform: rotate(@deg); 
+     -moz-transform: rotate(@deg); 
+      -ms-transform: rotate(@deg); 
+       -o-transform: rotate(@deg); 
+          transform: rotate(@deg); 
+}
+
+.substack {
+  .rotate(-7.5deg);
+  &:hover {
+  -webkit-animation: substack 0.6s infinite;
+     -moz-animation: substack 0.6s infinite;
+       -o-animation: substack 0.6s infinite;
+          animation: substack 0.6s infinite;
+  }
+}
+
+@-webkit-keyframes substack {
+  0%   { .rotate(-7.5deg); }
+  50%  { .rotate(7.5deg); }
+  100% { .rotate(-7.5deg); }
+}
+@-moz-keyframes substack {
+  0%   { .rotate(-7.5deg); }
+  50%  { .rotate(7.5deg); }
+  100% { .rotate(-7.5deg); }
+}
+@-o-keyframes substack {
+  0%   { .rotate(-7.5deg); }
+  50%  { .rotate(7.5deg); }
+  100% { .rotate(-7.5deg); }
+}
+@keyframes substack {
+  0%   { .rotate(-7.5deg); }
+  50%  { .rotate(7.5deg); }
+  100% { .rotate(-7.5deg); }
+}
+
+#and-so-node-is-fun {
+  background: #fff;
+  h1 { color: black; top: -100px; }
+  > a { .full-screen; }
+}
+
+/* article.ui-active h1.fragment { opacity: 1; } */
+
+.ui-hidden { visibility: hidden; }
+
+

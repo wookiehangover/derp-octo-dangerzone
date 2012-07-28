@@ -55,6 +55,16 @@ module.exports = function(grunt) {
           wrap: false
         }
       }
+    },
+    less: {
+      compile: {
+        options: {
+          paths: ["assets/less"]
+        },
+        files: {
+          "assets/css/jifasnif.css": "assets/less/jifasnif.less"
+        }
+      }
     }
   });
 

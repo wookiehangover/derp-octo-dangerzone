@@ -30,17 +30,13 @@ require([
 
     app.view = new Layout();
 
-    $(document).delegate("a", "click", function(evt) {
-      // Get the anchor href and protcol
-      var
-        href = $(this).attr("href"),
-        protocol = this.protocol + "//";
+    $(document).on("click", "a:not([data-bypass])", function(evt) {
+      var href = $(this).prop("href");
+      var root = location.protocol + "//" + location.host + app.root;
 
-      // Ensure the protocol is not part of URL, meaning its relative.
-      if (href.slice(protocol.length) !== protocol) {
+      if (href && href.slice(root.length) === root) {
         evt.preventDefault();
-
-        app.router.navigate(href, true);
+        Backbone.history.navigate(href.slice(root.length), true);
       }
     });
 
