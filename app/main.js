@@ -8,8 +8,6 @@ require([
 
     var app = {};
 
-    window.Boulderjs = app;
-
     var Router = Backbone.Router.extend({
       routes: {
         ":page": "page"
@@ -28,7 +26,7 @@ require([
 
     app.router = new Router();
 
-    app.view = new Layout();
+    app.view = new Layout( app.router );
 
     $(document).on("click", "a:not([data-bypass])", function(evt) {
       var href = $(this).prop("href");

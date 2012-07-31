@@ -10,7 +10,8 @@ define([
 
     el: $('#main'),
 
-    initialize: function( params ){
+    initialize: function( router ){
+      this.router = router;
       this.initializePages();
       this.scroll();
       this.keyboard();
@@ -60,7 +61,6 @@ define([
       });
 
       this.$el.css('height', _height);
-
     },
 
     scroll: function(){

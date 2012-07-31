@@ -35,7 +35,7 @@ define([
       var
         dfd = new $.Deferred(),
         current = $('.ui-active').index(),
-        speed   = time || ( current === this.index ? 600 : 600 * this.index );
+        speed   = time || ( current === this.index ? 600 : 1200 );
 
       $('html,body')
         .stop()
@@ -49,7 +49,7 @@ define([
     navigate: function(){
 
       if( $('html,body').is(':animated') === false ){
-        Boulderjs.router.navigate( this.route, false );
+        this.parent.router.navigate( this.route );
       }
 
       return this;

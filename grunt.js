@@ -29,8 +29,6 @@ module.exports = function(grunt) {
     },
     jshint: {
       options: {
-        curly: true,
-        eqeqeq: true,
         immed: true,
         latedef: true,
         newcap: true,
@@ -42,7 +40,10 @@ module.exports = function(grunt) {
         browser: true
       },
       globals: {
-        jQuery: true
+        $: true,
+        jQuery: true,
+        require: true,
+        define: true
       }
     },
     uglify: {},
